@@ -80,6 +80,7 @@ Then open your browser and visit:
 ## 🧪 Jupyter Notebook
 
 The file [`BloodCellClassifier.ipynb`](BloodCellClassifier.ipynb) contains:
+download you csv file from [`https://www.kaggle.com/datasets/paultimothymooney/blood-cells/data`](https://www.kaggle.com/datasets/paultimothymooney/blood-cells/data)
 
 - Data preprocessing steps
 - MobileNetV2-based transfer learning model
