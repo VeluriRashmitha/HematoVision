@@ -1,16 +1,25 @@
 # HematoVision
 
-HematoVision is a deep learning web application for blood cell image classification. It utilizes a pre-trained CNN model built with TensorFlow and provides an interactive interface using Flask.
+A deep learning web app for blood cell image classification using **Flask** and **TensorFlow**.
 
-## 🔬 About
-
-This project classifies microscopic images of blood cells into four categories:
+This project uses a Convolutional Neural Network (CNN) trained to classify four types of blood cells:
 - **Eosinophil**
 - **Lymphocyte**
 - **Monocyte**
 - **Neutrophil**
 
-The goal is to assist in the automated analysis of blood samples for medical diagnosis.
+The application allows users to upload blood cell images and returns the predicted cell type in a simple web interface.
+
+---
+
+## 🔧 Technologies Used
+
+- Python
+- TensorFlow / Keras
+- Flask
+- OpenCV
+- HTML & CSS (Milligram CSS framework)
+- Jupyter Notebook
 
 ---
 
@@ -19,83 +28,78 @@ The goal is to assist in the automated analysis of blood samples for medical dia
 ```
 HematoVision/
 │
-├── app.py                    # Flask backend application
-├── Blood Cell.h5             # Trained model file (excluded from GitHub)
-├── BloodCellClassifier.ipynb # Jupyter notebook for training/testing
+├── app.py                    # Flask application
+├── Blood Cell.h5             # Trained CNN model
+├── BloodCellClassifier.ipynb # Jupyter notebook used for model development
+├── .gitignore                # Git ignore rules
+├── requirements.txt          # List of Python dependencies
 ├── static/                   # Folder to store uploaded images
-├── templates/                # HTML templates
+│   └── (uploaded images)
+├── templates/
 │   ├── home.html             # Upload interface
-│   └── result.html           # Prediction result display
-└── README.md                 # Project description
+│   └── result.html           # Result page with prediction
+└── README.md                 # Project documentation
 ```
 
 ---
 
-## 🚀 Getting Started
+## ⚙️ How to Run the Project
 
-### 1. Clone the Repository
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YourUsername/HematoVision.git
+git clone https://github.com/Your Username/HematoVision.git
 cd HematoVision
 ```
 
-### 2. Install Dependencies
+### 2. Install the required packages
 
-Make sure you have Python and pip installed. Then run:
+Make sure you have Python (preferably 3.8+) installed, then install the required libraries:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Or manually install required libraries:
+If `requirements.txt` is missing, you can manually install:
 
 ```bash
 pip install flask tensorflow opencv-python
 ```
 
-### 3. Run the App
+### 3. Run the application
 
 ```bash
 python app.py
 ```
 
-Open your browser and go to:  
-👉 **http://127.0.0.1:5000/**
+Then open your browser and visit:  
+📍 [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 ---
 
-## 📓 Jupyter Notebook
+## 🧪 Jupyter Notebook
 
-- `BloodCellClassifier.ipynb` contains the code for:
-  - Data preprocessing
-  - CNN model building
-  - Training and evaluation
-  - Saving the trained model as `Blood Cell.h5`
+The file [`BloodCellClassifier.ipynb`](BloodCellClassifier.ipynb) contains:
 
----
+- Data preprocessing steps
+- MobileNetV2-based transfer learning model
+- Training and validation logic
+- Model evaluation and accuracy reporting
+- `Blood Cell.h5` model saving logic
 
-## ⚠️ Notes
-
-- The file `Blood Cell.h5` is large and not tracked on GitHub. Train your own or contact the project owner.
-- Use a `.gitignore` file to avoid uploading unnecessary files:
-  ```
-  *.h5
-  *.zip
-  __pycache__/
-  .ipynb_checkpoints/
-  ```
+You can open the notebook in Jupyter to explore how the model was built and trained.
 
 ---
 
-## 🧠 Future Improvements
+## 🧠 Model Info
 
-- Upload and predict multiple images
-- Enhance UI with modern styling (Bootstrap/Tailwind)
-- Deploy the app on cloud (Render, Vercel, etc.)
+- **Model Architecture**: Transfer learning using MobileNetV2
+- **Input Image Size**: 224x224 pixels
+- **Frameworks Used**: TensorFlow, Keras
+- **Model Output**: One of the four blood cell classes
 
 ---
 
-## 👩‍⚕️ Educational Purpose
+## 📜 License
 
-This project was created during an internship to apply machine learning to healthcare data and demonstrate a practical deep learning use case using Flask and TensorFlow.
+This project is open-source and free to use for learning and academic purposes.
